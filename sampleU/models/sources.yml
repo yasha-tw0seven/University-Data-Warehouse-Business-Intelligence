@@ -1,0 +1,57 @@
+version: 2
+
+sources:
+  - name: conformed
+    database: raw
+    schema: conformed
+
+    tables:
+      - name: DateDimension
+        columns:
+          - name: DateKey
+            tests:
+              - unique
+  - name: SAMPLEU
+    database: RAW
+    schema: SAMPLEU
+
+    tables:
+      - name: COURSE
+        columns:
+          - name: COURSEID
+            tests:
+              - unique
+      - name: COURSEEVALUATION
+        columns:
+          - name: EVAL_ID
+      - name: COURSEINSTRUCTOR
+        columns:
+          - name: COURSEID
+            tests:
+              - unique
+      - name: COURSEMODE
+        columns:
+          - name: COURSEID
+      - name: DEPARTMENT
+        columns:
+          - name: DEPARTMENTID
+            tests:
+              - unique
+      - name: OFFICEASSIGNMENT
+        columns:
+          - name: INSTRUCTORID
+            tests:
+              - unique
+      - name: ONLINECOURSE
+
+      - name: ONSITECOURSE
+        columns:
+          - name: COURSEID
+      - name: PERSON
+        columns:
+          - name: PERSONID
+            tests:
+              - unique
+      - name: STUDENTGRADE
+        columns:
+          - name: ENROLLMENTID
