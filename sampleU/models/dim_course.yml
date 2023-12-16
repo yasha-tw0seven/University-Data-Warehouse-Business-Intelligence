@@ -1,0 +1,14 @@
+version: 2
+models:
+ - name: dim_course
+   description: Course Dimension. One row per course 
+   columns:
+     - name: coursekey
+       description: The surrogate key of the course evaluation
+       tests:
+         - not_null
+         - unique
+     - name: COURSEID
+       description: The business / source key of the course evaluation
+       tests:
+         - not_null

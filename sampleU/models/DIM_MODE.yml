@@ -1,0 +1,15 @@
+version: 2
+models:
+ - name: DIM_MODE
+   description: Mode Dimension. One row per course with mode 
+   columns:
+     - name: modekey
+       description: The surrogate key of the mode
+       tests:
+         - not_null
+         - unique
+     - name: COURSEID
+       description: The business / source key of the mode
+       tests:
+         - not_null
+         - unique

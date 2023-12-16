@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: FACT_COURSEANALYSIS
+    description: Transaction fact table. One row per line course analysis.
+    columns:
+      - name: coursekey
+        description: source key used for drill through
+        tests:
+          - unique
+          - not_null
+      - name: enrollmentkey
+        description: Dimension FK for DIM_STUDENTGRADE
+      - name: departmentkey
+        description: Dimension FK for DIM_DEPARTMENT
+      - name: evalkey
+        description: Dimension FK for DIM_COURSEEVALUATION
+      - name: modekey
+        description: Dimension FK for DIM_MODE
+      - name: onsitekey
+        description: Dimension FK for DIM_ONSITE
+      - name: personkey
+        description: Dimension FK for DIM_PERSON   
+      - name: courseinstructorkey
+        description: Dimension FK for DIM_COURSEINSTRUCTOR    
+      - name: COURSEID
+        description: id of course
+      - name: student_count
+        description: the count of students in course
+      - name: gpa
+        description: overall gpa of students for that course
+      - name: ratingavg
+        description: average of rating  
+      - name: sentiment
+        description: sentiment for the course
+      - name: days
+        description: days course is available
+      - name: mode
+        description: mode of course
+      - name: credits
+        description: credits for the course  
+      - name: instructorname
+        description: name of instructor
+      - name: departmentname
+        description: name of department
+      - name: coursename
+        description: name of course       

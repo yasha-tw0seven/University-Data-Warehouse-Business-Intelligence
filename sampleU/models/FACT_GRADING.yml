@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: FACT_GRADING
+    description: Accumulating Snapshot fact table. One row per student grade
+    columns:
+      - name: enrollmentkey
+        description: source key used for drill through
+        tests:
+          - unique
+          - not_null
+      - name: personkey
+        description: Dimension FK for DIM_PERSON
+      - name: coursekey
+        description: Dimension FK for dim_course
+      - name: EnrollmentID
+        description: id of enrollment
+      - name: course_count
+        description: the count of course for student
+      - name: gpa
+        description: overall gpa of students 
+      - name: credits
+        description: credits for the course  
+      - name: studentname
+        description: name of student
