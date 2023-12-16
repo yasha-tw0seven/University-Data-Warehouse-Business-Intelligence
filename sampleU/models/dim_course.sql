@@ -1,4 +1,9 @@
-{{ config(materialized="table") }}
 with stg_course as (select * from {{ source("SAMPLEU", "COURSE") }})
-select courseid, departmentid, title, credits
+
+select
+    {{ dbt_utils.generate_surrogate_key(["stg_course.courseid"]) }} as coursekey,
+    courseid,
+    departmentid,
+    title,
+    credits
 from stg_course
