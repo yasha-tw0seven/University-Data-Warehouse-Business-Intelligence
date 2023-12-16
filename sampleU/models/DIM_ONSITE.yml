@@ -1,0 +1,14 @@
+version: 2
+models:
+ - name: DIM_ONSITE
+   description: Onsite course Dimension. One row per onsite course
+   columns:
+     - name: onlinekey
+       description: The surrogate key of the onsite course
+       tests:
+         - not_null
+         - unique
+     - name: COURSEID
+       description: The business / source key of the onsite course
+       tests:
+         - not_null

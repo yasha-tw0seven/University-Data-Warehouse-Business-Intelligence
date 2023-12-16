@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: FACT_DEPARTMENTBUDGET
+    description: Transaction fact table. One row per department budget.
+    columns:
+      - name: departmentkey
+        description: source key used for drill through
+        tests:
+          - unique
+          - not_null
+      - name: personkey
+        description: Dimension FK for DIM_PERSON      
+      - name: DepartmentID
+        description: id of department
+      - name: totalbudget
+        description: the budget of department
+      - name: name 
+        description: name of depatment  
+      - name: adminname
+        description: name of admin
+      - name: discriminator
+        description: role of admin

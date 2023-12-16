@@ -1,0 +1,15 @@
+version: 2
+models:
+ - name: DIM_COURSEINSTRUCTOR
+   description: Course Instructor Dimension. One row per course instructor
+   columns:
+     - name: courseinstructorkey
+       description: The surrogate key of the course instructor
+       tests:
+         - not_null
+         - unique
+     - name: COURSEID
+       description: The business / source key of the course instructor
+       tests:
+         - not_null
+

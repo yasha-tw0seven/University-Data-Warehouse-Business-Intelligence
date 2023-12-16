@@ -1,0 +1,14 @@
+version: 2
+models:
+ - name: DIM_PERSON
+   description: Person Dimension. One row per person
+   columns:
+     - name: personkey
+       description: The surrogate key of the person
+       tests:
+         - not_null
+         - unique
+     - name: PersonID
+       description: The business / source key of the person
+       tests:
+         - not_null

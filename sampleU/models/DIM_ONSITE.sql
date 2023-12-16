@@ -1,6 +1,6 @@
 with stg_onsite as (select * from {{ source("SAMPLEU", "ONSITECOURSE") }})
 select
-    {{ dbt_utils.generate_surrogate_key(["stg_onsite.COURSEID"]) }} as departmentkey,
+    {{ dbt_utils.generate_surrogate_key(["stg_onsite.COURSEID"]) }} as onlinekey,
     courseid,
     location,
     days,

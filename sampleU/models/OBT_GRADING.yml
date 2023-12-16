@@ -1,0 +1,4 @@
+version: 2
+models:
+  - name: OBT_GRADING
+    description: The grading analysis fulfillment fact table combined with all of its outrigger dimensions into one bit table. Accumulating Snapshot fact table with one row per student grade.

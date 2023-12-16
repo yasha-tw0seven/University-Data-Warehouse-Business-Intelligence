@@ -1,0 +1,14 @@
+version: 2
+models:
+ - name: DIM_COURSEEVALUATION
+   description: Course evaluation Dimension. One row per course evaluation
+   columns:
+     - name: evalkey
+       description: The surrogate key of the course evaluation
+       tests:
+         - not_null
+         - unique
+     - name: course_id
+       description: The business / source key of the course evaluation
+       tests:
+         - not_null

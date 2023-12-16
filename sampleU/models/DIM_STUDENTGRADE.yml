@@ -1,0 +1,14 @@
+version: 2
+models:
+ - name: DIM_STUDENTGRADE
+   description: Student Grade Dimension. One row per student grade
+   columns:
+     - name: enrollmentkey
+       description: The surrogate key of the course instructor
+       tests:
+         - not_null
+         - unique
+     - name: enrollmentid
+       description: The business / source key of the course instructor
+       tests:
+         - not_null
